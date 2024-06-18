@@ -1,0 +1,47 @@
+﻿@page
+@model DHL_LOGIN_FINAL.Pages.HomeModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+        <div class="alert alert-success text-center" role="alert">
+        @TempData["SuccessMessage"]
+        </div>
+}
+
+<div class="container-fluid p-3">
+    <div class="row">
+        <div class="col-lg-8">
+            <h2 class="login-title" style="color: #00539C; font-weight: bold; text-align: left;">Welcome to DHL</h2>
+            <p class="mb-4" style="font-weight: 600; color: black; text-align: left;">
+                You are logged in as @HttpContext.Session.GetString("Username")
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid p-0">
+    <div class="row">
+        <div class="col-12" style="height: calc(33.33vh); background-image: url('../../Image/background2.jpg'); background-size: cover; background-position: center;"></div>
+    </div>
+</div>
+
+<div class="container-fluid p-3">
+    <div class="row">
+        <div class="col-lg-8">
+            <h2 class="login-title" style="color: #00539C; font-weight: bold; text-align: left;">What we offer</h2>
+            <p class="mb-4" style="font-weight: 600; color: black; text-align: left;">
+                From efficient parcel delivery solutions to reliable tracking services, we provide seamless shipping options worldwide. Our commitment to innovation ensures that your shipments are handled with precision and care,
+                <span style="font-weight: bold; color: #FF001F;">delivering peace of mind every step of the way.</span>
+            </p>
+            
+        </div>
+    </div>
+
+</div>
+
+            <div class="text-left">
+                <a href="#" class="btn btn-custom text-uppercase" style="background-color: #FFCC00; color: #FF001F;">Explore our services now</a>
+            </div>
